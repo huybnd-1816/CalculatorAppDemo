@@ -9,10 +9,10 @@
 import UIKit
 
 enum Operator {
-    case Mutiply
-    case Divide
-    case Plus
-    case Subtract
+    case mutiply
+    case divide
+    case plus
+    case subtract
 }
 
 class ViewController: UIViewController {
@@ -22,8 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnAC: UIButton!
     @IBOutlet var btnOperatorsAction: [UIButton]!
     
-    var tempValue : Double?
-    var currentOperator:Operator?
+    var tempValue: Double?
+    var currentOperator: Operator?
     var check = true //If user press button Equal
     
     override func viewDidLoad() {
@@ -32,32 +32,28 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func btnAC_Clicked(_ sender: Any) {
+    @IBAction func handleACtapped(_ sender: Any) {
         lblResult.text = "0"
         check = true
         tempValue = 0.0
         currentOperator = nil
-        ReturnToOriginalState()
+        resetState()
     }
     
-    @IBAction func btnNumberActions_Clicked(_ sender: UIButton) {
-        if (sender.tag == 0 && lblResult.text?.first == "0")
-        {
+    @IBAction func handleNumbersTapped(_ sender: UIButton) {
+        if (sender.tag == 0 && lblResult.text?.first == "0"){
             return
         }
         
         guard (lblResult.text?.count)! < 11 else { return }
         
-        if (lblResult.text == "0")
-        {
+        if (lblResult.text == "0"){
             lblResult.text = lblResult.text?.replacingOccurrences(of: "0", with: String(sender.tag))
         }
-        else if (check)
-        {
+        else if check{
             lblResult.text?.append(String(sender.tag))
         }
-        else
-        {
+        else{
             lblResult.text = ""
             lblResult.text?.append(String(sender.tag))
             check = true
@@ -65,65 +61,58 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func btnOperators_Clicked(_ sender: UIButton) {
+    @IBAction func handleOperatorTapped(_ sender: UIButton) {
         tempValue = Double(lblResult.text!)
         check = false
         
-        ReturnToOriginalState()
+        resetState()
         
         switch sender {
         case btnOperatorsAction[0]:
-            currentOperator = Operator.Plus
-            btnOperatorsAction[0].backgroundColor = .black
+            currentOperator = Operator.plus
         case btnOperatorsAction[1]:
-            currentOperator = Operator.Subtract
-            btnOperatorsAction[1].backgroundColor = .black
+            currentOperator = Operator.subtract
         case btnOperatorsAction[2]:
-            currentOperator = Operator.Mutiply
-            btnOperatorsAction[2].backgroundColor = .black
+            currentOperator = Operator.mutiply
         case btnOperatorsAction[3]:
-            currentOperator = Operator.Divide
-            btnOperatorsAction[3].backgroundColor = .black
+            currentOperator = Operator.divide
         default:
             print("Error")
         }
+        sender.backgroundColor = .black
     }
     
-    @IBAction func btnEqual_Clicked(_ sender: Any) {
+    @IBAction func handleEqualTapped(_ sender: Any) {
         check = false
-        
+        guard let tempValue = tempValue else { return }
         guard currentOperator != nil else { return }
         let currentResult = Double(lblResult.text!)!
         let finalResult:Double?
         
         switch currentOperator! {
-            case .Plus:
-                finalResult = tempValue! + currentResult
-            case .Subtract:
-                finalResult = tempValue! - currentResult
-            case .Mutiply:
-                finalResult = tempValue! * currentResult
-            case .Divide:
+            case .plus:
+                finalResult = tempValue + currentResult
+            case .subtract:
+                finalResult = tempValue - currentResult
+            case .mutiply:
+                finalResult = tempValue * currentResult
+            case .divide:
                 guard lblResult.text != "0" else {
                     lblResult.text = "Error"
                     return
                 }
             
-                finalResult = (tempValue! / currentResult)
+                finalResult = (tempValue / currentResult)
         }
         
-        lblResult.text = forTrailingZero(temp: finalResult!)
+        lblResult.text = removeTrailingZero(temp: finalResult!)
         
-        tempValue = 0.0
-        currentOperator = nil
-        ReturnToOriginalState()
+        resetState()
     }
     
-    @IBAction func btnDot_Clicked(_ sender: Any) {
-        if !(lblResult.text?.contains("."))!
-        {
-            if (!check)
-            {
+    @IBAction func handleDotTapped(_ sender: Any) {
+        if !(lblResult.text?.contains("."))!{
+            if (!check){
                 lblResult.text = "0"
             }
             lblResult.text?.append(".")
@@ -131,37 +120,35 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func btnPosNeg_Clicked(_ sender: Any) {
+    @IBAction func handlePosNegTapped(_ sender: Any) {
         var number:Double = Double(lblResult.text!)!
         
-        if (number > 0.0 || number < 0.0)
-        {
+        if (number > 0.0 || number < 0.0){
             number = -number;
         }
         
-        lblResult.text = forTrailingZero(temp: number)
+        lblResult.text = removeTrailingZero(temp: number)
     }
     
-    @IBAction func btnPercentage_Clicked(_ sender: Any) {
+    @IBAction func handlePercentageTapped(_ sender: Any) {
         var number:Double = Double(lblResult.text!)!
         
-        if (number != 0.0)
-        {
+        if (number != 0.0){
             number = number / 100
-            lblResult.text = forTrailingZero(temp: number)
+            lblResult.text = removeTrailingZero(temp: number)
         }
     }
 }
 
 extension ViewController {
     //TODO: Round Double value
-    func forTrailingZero(temp: Double) -> String {
+    func removeTrailingZero(temp: Double) -> String {
         let tempVar = String(format: "%g", temp)
         return tempVar
     }
     
     //TODO: Return Original State
-    func ReturnToOriginalState()
+    func resetState()
     {
         btnOperatorsAction[0].backgroundColor = UIColor(red: 247/255, green: 146/255, blue: 49/255, alpha: 1.0)
         btnOperatorsAction[1].backgroundColor = UIColor(red: 247/255, green: 146/255, blue: 49/255, alpha: 1.0)

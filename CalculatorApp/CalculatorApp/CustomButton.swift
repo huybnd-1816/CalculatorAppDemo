@@ -43,7 +43,7 @@ extension UIButton {
             return self.contentEdgeInsets.left
         }
         set {
-            self.contentEdgeInsets = UIEdgeInsets(top: 0, left: newValue * UIScreen.main.bounds.width - 8, bottom: 0, right: 0)
+            self.contentEdgeInsets = UIEdgeInsets(top: 0, left: newValue * self.frame.width - 8, bottom: 0, right: 0)
         }
     }
 }

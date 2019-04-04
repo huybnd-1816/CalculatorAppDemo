@@ -43,7 +43,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnAC_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U1G-4e-NlI"/>
+                                            <action selector="handleACtapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U1G-4e-NlI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xx-3z-SIa">
@@ -68,7 +68,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnPosNeg_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eFq-Wq-dB9"/>
+                                            <action selector="handlePosNegTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eFq-Wq-dB9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iE-gM-Zdv">
@@ -93,7 +93,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnPercentage_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OYf-kc-Zxx"/>
+                                            <action selector="handlePercentageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OYf-kc-Zxx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzd-6i-irT">
@@ -112,7 +112,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnOperators_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nKh-IJ-mZi"/>
+                                            <action selector="handleOperatorTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nKh-IJ-mZi"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -136,7 +136,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnNumberActions_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Oj-nR-GQW"/>
+                                            <action selector="handleNumbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Oj-nR-GQW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUL-8s-dPy">
@@ -155,7 +155,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnNumberActions_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xqW-C5-oXc"/>
+                                            <action selector="handleNumbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xqW-C5-oXc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZd-C6-Ojv">
@@ -174,7 +174,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnNumberActions_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jKS-Xo-Ely"/>
+                                            <action selector="handleNumbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jKS-Xo-Ely"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WX-Gq-CEn">
@@ -193,7 +193,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnOperators_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ilv-3R-fpo"/>
+                                            <action selector="handleOperatorTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ilv-3R-fpo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -217,7 +217,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnNumberActions_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sv-me-EEX"/>
+                                            <action selector="handleNumbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sv-me-EEX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLf-f5-9C4">
@@ -236,7 +236,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnNumberActions_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="msb-SK-rIp"/>
+                                            <action selector="handleNumbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="msb-SK-rIp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCS-bw-XkH">
@@ -255,7 +255,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnNumberActions_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jK2-GD-Ffe"/>
+                                            <action selector="handleNumbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jK2-GD-Ffe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ce-dY-zma">
@@ -274,7 +274,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnOperators_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jLZ-NO-E52"/>
+                                            <action selector="handleOperatorTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jLZ-NO-E52"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -298,7 +298,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnNumberActions_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MU3-Zz-Uaq"/>
+                                            <action selector="handleNumbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MU3-Zz-Uaq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRk-ic-SNs">
@@ -317,7 +317,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnNumberActions_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rPu-YN-w0d"/>
+                                            <action selector="handleNumbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rPu-YN-w0d"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4L-cR-2iY">
@@ -336,7 +336,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnNumberActions_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAn-Pu-DGm"/>
+                                            <action selector="handleNumbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAn-Pu-DGm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bE-cN-d95">
@@ -355,7 +355,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnOperators_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P2Q-3z-f4p"/>
+                                            <action selector="handleOperatorTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P2Q-3z-f4p"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -363,7 +363,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="eBL-bb-8Ue">
                                 <rect key="frame" x="0.0" y="556" width="375" height="111"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KID-y9-RwG">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KID-y9-RwG">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="111"/>
                                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -378,12 +378,9 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="0.5"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="leadingSpace">
-                                                <real key="value" value="0.125"/>
-                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnNumberActions_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ylu-Ad-ZeE"/>
+                                            <action selector="handleNumbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ylu-Ad-ZeE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALr-j9-npd">
@@ -402,7 +399,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnDot_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q9B-vn-Nz0"/>
+                                            <action selector="handleDotTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q9B-vn-Nz0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iX7-7J-U9I">
@@ -421,7 +418,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnEqual_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LDw-A3-dG5"/>
+                                            <action selector="handleEqualTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LDw-A3-dG5"/>
                                         </connections>
                                     </button>
                                 </subviews>
